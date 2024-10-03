@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+
+"""
+Module for 0-pascal_triangle
+Function returning list of lists
+"""
+
+
 def pascal_triangle(n):
     if n <= 0:
         return []
