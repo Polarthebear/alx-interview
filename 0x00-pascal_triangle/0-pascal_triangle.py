@@ -7,7 +7,7 @@ Function returning list of lists
 
 def pascal_triangle(n):
     """
-    Returns a list of lists of integers 
+    Returns a list of lists of integers
     representing the Pascal's tringle of n:
       Args ->
           n: input parameter of the function
@@ -20,7 +20,7 @@ def pascal_triangle(n):
 
     if n <= 0:
         return triangle
-    
+
     for i in range(n):
         temp_list = []
 
