@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Module for 0-pascal_triangle
 Function returning list of lists
@@ -17,16 +16,20 @@ def pascal_triangle(n):
           List of lists of integers(Success)
           Empty list (Fail)
     """
-     if n <= 0:
-        return []
-     
-     triangle = [[1]]
-     
-     for i in range(1, n):
-        row = [1]
-        for j in range(1, i):
-            row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
-        row.append(1)
-        triangle.append(row)
-        
+    triangle = []
+
+    if n <= 0:
         return triangle
+    
+    for i in range(n):
+        temp_list = []
+
+        for j in range(i+1):
+            if j == 0 or j == i:
+                temp_list.append(1)
+            else:
+                temp_list.append(triangle[i-1][j-1] + triangle[i-1][j])
+        triangle.append(temp_list)
+
+    # Print triangle
+    return triangle
