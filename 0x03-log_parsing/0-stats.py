@@ -33,12 +33,10 @@ try:
         except Exception:
             pass
 
-
         try:
             filesize += int(data[-1])
         except Exception:
             pass
-
 
         if count % 10 == 0:
             print_stats(stats, filesize)
