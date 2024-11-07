@@ -25,8 +25,7 @@ def add_queen(row, n, partial_solutions):
 def is_position_safe(new_row, new_col, solution):
     """func checks if queen can be placed with no conflict."""
     for existing_row, existing_col in enumerate(solution):
-        if existing_col == new_col or abs(existing_col - new_col)
-        == abs(existing_row - new_row):
+        if existing_col == new_col or abs(existing_col - new_col) == abs(existing_row - new_row):
             return False
     return True
 
