@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Mock interview prime game module"""
+
+
 def isWinner(x, nums):
+    """Determines the winner of a prime game session with `x` rounds"""
     def sieve_of_eratosthenes(max_n):
         """Create a sieve to determine primes up to max_n."""
         sieve = [True] * (max_n + 1)
